@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    cardView:cardCornerRadius="4dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cardView:cardCornerRadius="4dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/idquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Goes Here!"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/idRadio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Opcion 1"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/idRadio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Opcion 2"/>
+
+                <RadioButton
+                    android:id="@+id/idRadio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Opcion 1"
+                    />
+
+                <RadioButton
+                    android:id="@+id/idRadio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Opcion 2"/>
+
+            </RadioGroup>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+

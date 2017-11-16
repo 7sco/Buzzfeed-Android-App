@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.franciscoandrade.buzzfeedquiz.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/idquiz1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/firstquizz_txt"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/testone"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:id="@+id/quizzbtn1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/takequizz_txt"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idquiz2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/firstquizz_txt"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/testone"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:id="@+id/quizzbtn2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/takequizz_txt"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
