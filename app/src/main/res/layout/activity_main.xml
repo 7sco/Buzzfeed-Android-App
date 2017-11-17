@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context="com.example.franciscoandrade.buzzfeedquiz.MainActivity">
 
 
@@ -13,7 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -21,34 +24,46 @@
             android:text="@string/firstquizz_txt"
             android:textSize="20sp"
             android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
             />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="0dp"
             android:layout_weight="3"
             android:background="@drawable/testone"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+
             />
 
         <Button
             android:id="@+id/quizzbtn1"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
+            android:theme="@style/RaisedButtonDark"
             android:text="@string/takequizz_txt"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
             android:onClick="onClick"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        />
 
     <LinearLayout
         android:id="@+id/idquiz2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -56,24 +71,28 @@
             android:text="@string/firstquizz_txt"
             android:textSize="20sp"
             android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+
             />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="0dp"
             android:layout_weight="3"
-            android:background="@drawable/testone"
-            android:layout_margin="20dp"
+            android:background="@drawable/testtwo"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
             />
 
         <Button
             android:id="@+id/quizzbtn2"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:theme="@style/RaisedButtonDark"
             android:text="@string/takequizz_txt"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
             android:onClick="onClick"
             />
 
