@@ -2,17 +2,20 @@ package com.example.franciscoandrade.buzzfeedquiz.view;
 
 import android.app.Application;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.franciscoandrade.buzzfeedquiz.Question;
 import com.example.franciscoandrade.buzzfeedquiz.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -27,6 +30,10 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
     ArrayList<Question> listQuestions;
     boolean pregunta1, pregunta2, pregunta3, pregunta4, pregunta5;
     int isCheked;
+
+    public QuestionViewHolder() {
+
+    }
 
     public int getIsCheked() {
         return isCheked;
@@ -69,6 +76,8 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
     @Override
     public void onBindViewHolder(final ViewHolderQuestion holder, final int position) {
 
+
+
         Question question= listQuestions.get(position);
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -78,14 +87,14 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                 switch (position){
 
                     case 0:
-                        if (rdBtn.getId()== R.id.idRadio1){
+                        if (rdBtn.getId() == R.id.idRadio1){
                             setPregunta1(true);
                             //pregunta1=true;
                             holder.ques.setText("Right");
 
                         }else{
                            //pregunta1=false;
-                            setPregunta2(true);
+                            setPregunta1(true);
                             holder.ques.setText("Wrong");
                         }
                         break;
@@ -96,7 +105,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                             setPregunta2(true);
                             holder.ques.setText("Right");
                         }else{
-                            pregunta2=false;
+                            setPregunta2(false);
                             holder.ques.setText("Wrong");
                         }
                         break;
@@ -107,7 +116,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                             setPregunta3(true);
                             holder.ques.setText("Right");
                         }else{
-                            pregunta3=false;
+                            setPregunta3(false);
                             holder.ques.setText("Wrong");
                         }
                         break;
@@ -118,7 +127,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                             setPregunta4(true);
                             holder.ques.setText("Right");
                         }else{
-                            pregunta4=false;
+                            setPregunta4(false);
                             holder.ques.setText("Wrong");
                         }
 
@@ -129,7 +138,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                             setPregunta4(true);
                             holder.ques.setText("Right");
                         }else{
-                            pregunta4=false;
+                            setPregunta4(false);
                             holder.ques.setText("Wrong");
                         }
 
@@ -138,7 +147,6 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
                 }
 
                 if(rdBtn.isChecked()){
-
                     isCheked++;
                     setIsCheked(isCheked);
 
@@ -172,6 +180,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
         });
 
         holder.onBind(question);
+        //Picasso.with().load("http://i.imgur.com/DvpvklR.png").into(imageView);
 
 
     }
@@ -212,6 +221,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
        TextView ques;
        RadioButton ans1, ans2, ans3, ans4;
        Button checkBtn;
+
        int choice=0;
 
 
@@ -227,7 +237,10 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
             ans4 = itemView.findViewById(R.id.idRadio4);
             checkBtn=(Button)itemView.findViewById(R.id.idDone_btn);
 
-
+            ans1.setChecked(false);
+            ans2.setChecked(false);
+            ans3.setChecked(false);
+            ans4.setChecked(false);
 
             ans1.setOnClickListener(this);
             ans2.setOnClickListener(this);
@@ -248,6 +261,7 @@ public class QuestionViewHolder extends RecyclerView.Adapter<QuestionViewHolder.
             ans2.setText(lista.get(1));
             ans3.setText(lista.get(2));
             ans4.setText(lista.get(3));
+
 
         }
 

@@ -2,4 +2,5 @@
     <string name="app_name">BuzzfeedQuiz</string>
     <string name="firstquizz_txt">How much do you think you know about your stuff?</string>
     <string name="takequizz_txt">Take Quiz</string>
+    <string name="secondquizz_txt">Personality Test</string>
 </resources>

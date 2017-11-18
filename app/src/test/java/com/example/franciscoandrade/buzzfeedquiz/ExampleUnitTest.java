@@ -1,7 +1,10 @@
 package com.example.franciscoandrade.buzzfeedquiz;
 
+import com.example.franciscoandrade.buzzfeedquiz.view.QuestionViewHolder;
+
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.*;
 
 /**
@@ -14,4 +17,21 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+    QuestionViewHolder quizz= new QuestionViewHolder();
+
+
+    public void checkClicks(){
+
+        int clicks= quizz.getIsCheked();
+        assertThat(quizz,instanceOf(Integer.class));
+    }
+
+    @Test
+    public void count() throws Exception {
+        int a=5;
+        quizz.setIsCheked(a);
+        assertEquals(a, 5);
+    }
+
+
 }

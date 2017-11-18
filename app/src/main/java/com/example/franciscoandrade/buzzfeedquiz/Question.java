@@ -18,6 +18,7 @@ public class Question {
         this.question = question;
         this.answer = answer;
         this.list = list;
+
        // this.selection = selection;
     }
 
@@ -32,6 +33,7 @@ public class Question {
     public ArrayList<String> getList() {
         return list;
     }
+
 
 //    public String getSelection() {
 //        return selection;

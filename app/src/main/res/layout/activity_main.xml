@@ -29,13 +29,12 @@
             />
 
         <ImageView
+            android:id="@+id/idimage_q1"
             android:layout_width="300dp"
             android:layout_height="0dp"
             android:layout_weight="3"
-            android:background="@drawable/testone"
             android:layout_margin="10dp"
             android:layout_gravity="center"
-
             />
 
         <Button
@@ -46,7 +45,7 @@
             android:layout_gravity="center"
             android:theme="@style/RaisedButtonDark"
             android:text="@string/takequizz_txt"
-            android:onClick="onClick"/>
+            android:onClick="onClickMain"/>
 
     </LinearLayout>
 
@@ -68,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/firstquizz_txt"
+            android:text="@string/secondquizz_txt"
             android:textSize="20sp"
             android:gravity="center"
             android:textStyle="bold"
@@ -77,10 +76,10 @@
             />
 
         <ImageView
+            android:id="@+id/idimage_q2"
             android:layout_width="300dp"
             android:layout_height="0dp"
             android:layout_weight="3"
-            android:background="@drawable/testtwo"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             />
@@ -93,7 +92,7 @@
             android:layout_weight="1"
             android:theme="@style/RaisedButtonDark"
             android:text="@string/takequizz_txt"
-            android:onClick="onClick"
+            android:onClick="onClickMain"
             />
 
     </LinearLayout>
